@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxMaster - Uganda PAYE Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TaxMaster</h1>
+            <p>Uganda PAYE Calculator (2026)</p>
+        </header>
+
+        <main>
+            <div class="input-section card">
+                <label for="gross-salary">Monthly Gross Salary</label>
+                <div class="input-group">
+                    <span class="prefix">UGX</span>
+                    <input type="number" id="gross-salary" placeholder="0" min="0" step="1000">
+                </div>
+                <button id="calculate-btn">Calculate</button>
+            </div>
+
+            <div id="results-card" class="results-card card hidden">
+                <h2>Tax Breakdown</h2>
+                <div class="result-row">
+                    <span>Gross Salary:</span>
+                    <span id="res-gross" class="amount">UGX 0</span>
+                </div>
+                <div class="result-row">
+                    <span>PAYE Tax:</span>
+                    <span id="res-tax" class="amount highlight">UGX 0</span>
+                </div>
+                <hr>
+                <div class="result-row total">
+                    <span>Net Pay:</span>
+                    <span id="res-net" class="amount">UGX 0</span>
+                </div>
+                <button id="copy-btn" class="secondary-btn">Copy Summary</button>
+            </div>
+
+            <section class="mobile-money-section card">
+                <h3>Mobile Money Integration</h3>
+                <p class="subtitle">Future Feature</p>
+                <div class="button-group">
+                    <button disabled class="mm-btn mtn">Pay with MTN</button>
+                    <button disabled class="mm-btn airtel">Pay with Airtel</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 TaxMaster. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
